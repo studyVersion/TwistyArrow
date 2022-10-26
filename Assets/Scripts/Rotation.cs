@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Rotation : MonoBehaviour
 {
-    private float velocidad = 0.5f;
+    private float velocidad = 1f;
     private float tiempoCambio = 3;
     void Start()
     {
@@ -21,10 +21,10 @@ public class Rotation : MonoBehaviour
         while (true)
          {
             yield return new WaitForSeconds(tiempoCambio);
-            float aux = Random.Range(-0.8f, 0.8f);
+            float aux = Random.Range(-2f, 2f);
 
             if (aux == 0) {
-              aux += 0.5f;
+              aux += 1f;
             }
             velocidad = aux;
           }
